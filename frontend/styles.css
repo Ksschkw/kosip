@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(230deg, #ff0000, #ff0000, #000, #000, #000);
+    color: #fff;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+    font-size: 15px; /* Reduced font size */
+    padding: 10px 20px; /* Reduced padding */
+}
+
+nav a:hover {
+    color: #ff0000;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 20px 50px 20px;
+    margin-top: 60px;
+}
+
+.hero-text {
+    max-width: 45%;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: 80px;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.hero-carousel {
+    max-width: 45%;
+    margin-left: 5%;
+}
+
+.hero-carousel img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.contact { 
+    text-align: center; 
+    margin-top: 40px; 
+} 
+.contact h2 { 
+    font-size: 28px; 
+    margin-bottom: 20px; 
+} 
+.contact-info { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+} 
+.contact-info a { 
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 20px; 
+    margin: 10px; 
+    transition: color 0.3s; 
+    display: flex; 
+    align-items: center;
+} 
+.contact-info a:hover { 
+    color: #f10808; 
+} 
+.contact-info i { 
+    margin-right: 10px; 
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+    color: #ff0000;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 767px) {
+    .hero {
+        display: block;
+        padding: 80px 10px 20px 10px;
+        margin-top: 60px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-carousel {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-width: 100%;
+    }
+
+    #sudokuGame input {
+        height: 30px;
+        font-size: 16px;
+    }
+
+    #hintButton {
+        padding: 5px 10px;
+    }
+
+    header {
+        display: block;
+        padding: 10px;
+        top: 0;
+    }
+
+    nav {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 12px; /* Reduced font size */
+        padding: 4px; /* Reduced padding */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-text h1 {
+        font-size: 60px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    nav a {
+        font-size: 14px; /* Adjusted font size for tablet screens */
+        padding: 5px 20px; /* Adjusted padding for tablet screens */
+    }
+}

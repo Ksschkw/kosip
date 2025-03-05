@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okafor Kosisochukwu JohnPaul - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">KOX1X0</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Welcome to My Portfolio</h1>
+                <p>Level up your company/brand/firm, let me do me.</p>
+                <p>This is a showcase of my work and skills.</p>
+            </div>
+            <div class="hero-carousel">
+                <div><img src="img1.jpeg" alt="Image 1"></div>
+                <div><img src="img2.jpeg" alt="Image 2"></div>
+                <div><img src="img3.jpeg" alt="Image 3"></div>
+                <div><img src="img4.jpeg" alt="Image 4"></div>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a software engineering student at the Federal University of Technology Owerri (FUTO) with a strong focus on machine learning, particularly Convolutional Neural Networks (CNNs).</p>
+        </section>
+        <section id="education">
+            <h2>Highest level of Education</h2>
+            <p>Bachelor of Engineering in Software Engineering<br>Federal University of Technology Owerri, Nigeria<br>Expected Graduation: 2026</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Strong understanding of AI and machine learning concepts</li>
+                <li>Proficient in Python (NumPy, Pandas, scikit-learn, OpenCV, Mediapipe, TensorFlow)</li>
+                <li>Basic knowledge of C++, Java, and JavaScript (I built this site myself)</li>
+                <li>Basic knowledge of HTML and CSS</li>
+                <li>Proficient in AI prompting</li>
+                <li>Excellent problem-solving and analytical skills</li>
+                <li>Effective communication and teamwork abilities</li>
+            </ul>
+        </section>
+        <section class="contact" id="contact"> 
+            <h2>Contact me</h2> 
+            <div class="contact-info"> 
+                <a href="mailto:kookafor893@gmail.com"><i class="fas fa-envelope"></i> contact@grpght.com</a> 
+                <a href="https://instagram.com/grpght" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> 
+                <a href="https://www.facebook.com/profil" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> 
+                <a href="https://www.tiktok.com/@.........k?_t=8rrVS1eICud&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+                <a href="https://x.com/Santandave1" target="_blank"><i class="fab fa-twitter"></i> X </a> 
+            </div> 
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Okafor Kosisochukwu JohnPaul</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        // Define the backend URL
+        const backendUrl = 'http://127.0.0.1:5000';
+
+        // Example function to make an API request to the backend
+        function fetchBackendData() {
+            fetch(`${backendUrl}/api/endpoint`)
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the data
+                    console.log(data);
+                });
+        }
+
+        $(document).ready(function(){
+            $('.hero-carousel').slick({
+                autoplay: true,
+                dots: true,
+                arrows: false
+            });
+        });
+    </script>
+</body>
+</html>
