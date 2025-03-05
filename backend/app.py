@@ -6,7 +6,7 @@ CORS(app)  # Enable CORS for all routes
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template(app.static_folder,'index.html')
 @app.route('/projects')
 def serve_projects():
     return send_from_directory(app.static_folder, 'projects.html')
